@@ -9,17 +9,16 @@ public class ArrayListExample {
 	public static void main(String args[]) {
 		
 		ArrayList<String> al = new ArrayList<String>();
-		ArrayList<String> al1 = new ArrayList<String>();
 		
 		al.add("jaggu");
 		al.add("varma");
-		al.add("jaggu");
+		al.add("jagguss");
 		al.add(0, "alluri");	
 		
 		System.out.println(al);
 		System.out.println(al.get(1));
 		System.out.println(al.lastIndexOf("jaggu"));
-		al1 = (ArrayList<String>) al.clone();
+		Object al1 =  al.clone();
 		System.out.println(al1);
 		
 		Iterator<String> it= al.iterator();
@@ -62,7 +61,7 @@ public class ArrayListExample {
 			
 			ArrayList<Student> list = (ArrayList<Student>) ois.readObject();
 			
-			Iterator i = list.iterator();
+			Iterator<Student> i = list.iterator();
 			while(i.hasNext()) {
 				Student ss = (Student) i.next();
 				System.out.println(ss.id+ " name= "+ss.name);

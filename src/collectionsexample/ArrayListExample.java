@@ -2,6 +2,7 @@ package collectionsexample;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayListExample {
@@ -13,9 +14,19 @@ public class ArrayListExample {
 		al.add("jaggu");
 		al.add("varma");
 		al.add("jagguss");
-		al.add(0, "alluri");	
+		al.add(0, "alluri");
 		
-		System.out.println(al);
+		ArrayList<Integer> ai = new ArrayList<Integer>();
+		
+		ai.add(1);
+		ai.add(2);
+		ai.add(3);
+		ai.add(2);
+		
+		ai.remove(Integer.valueOf("3"));
+		ai.removeAll(Arrays.asList(2));
+		
+		System.out.println(ai);
 		System.out.println(al.get(1));
 		System.out.println(al.lastIndexOf("jaggu"));
 		Object al1 =  al.clone();
